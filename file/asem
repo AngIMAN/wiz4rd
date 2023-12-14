@@ -1,0 +1,7 @@
+
+REPO="https://raw.githubusercontent.com/AngIMAN/wiz4rd/MONSTER/file"
+
+
+
+wget -q -O /etc/default/dropbear "${REPO}/dropbear.conf"
+chmod +x /etc/default/dropbear
