@@ -2,6 +2,12 @@
 NS=$( cat /etc/xray/dns )
 PUB=$( cat /etc/slowdns/server.pub )
 domain=$(cat /etc/xray/domain)
+cd /usr/bin
+rm -rf bot
+rm -rf kyt
+cd /etc/systemd/system/
+rm -rf kyt.service
+cd
 #color
 grenbo="\e[92;1m"
 NC='\e[0m'
@@ -9,29 +15,31 @@ NC='\e[0m'
 apt update && apt upgrade
 apt install python3 python3-pip git
 cd /usr/bin
-wget https://raw.githubusercontent.com/AngIMAN/v4/main/bot/bot.zip
+wget https://raw.githubusercontent.com/AngIMAN/wiz4rd/MONSTER/bot/bot.zip
+clear
 unzip bot.zip
+clear
 mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/AngIMAN/v4/main/bot/kyt.zip
+wget https://raw.githubusercontent.com/AngIMAN/wiz4rd/MONSTER/bot/kyt.zip
+clear
 unzip kyt.zip
+clear
 pip3 install -r kyt/requirements.txt
 
-clear
+#isi data
 echo ""
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[96;1m          ADD BOT PANEL          \e[0m"
+echo -e " \e[1;97;101m          ADD BOT PANEL          \e[0m"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "${grenbo}Tutorial Creat Bot and ID Telegram${NC}"
 echo -e "${grenbo}[*] Creat Bot and Token Bot : @BotFather${NC}"
 echo -e "${grenbo}[*] Info Id Telegram : @MissRose_bot , perintah /info${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e ""
-echo -e ""
-read -e -p "[*] Input your Bot Token :  " bottoken
-read -e -p "[*] Input Your Id Telegram :  " admin
+read -e -p "[*] Input your Bot Token : " bottoken
+read -e -p "[*] Input Your Id Telegram :" admin
 echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
 echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
 echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
@@ -68,12 +76,6 @@ echo "Pub            : $PUB"
 echo "Host           : $NS"
 echo -e "==============================="
 echo "Setting done"
-sleep 2
 clear
-echo -e ""
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\033[92mInstallations complete, type /menu on your bot\033[0m"
-echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e ""
-read -p "Press !! [ ENTER ] Back To Menu"
-menu
+
+echo " Installations complete, type /menu on your bot
