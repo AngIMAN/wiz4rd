@@ -77,5 +77,3 @@ echo "Host           : $NS"
 echo -e "==============================="
 echo "Setting done"
 clear
-
-echo " Installations complete, type /menu on your bot
